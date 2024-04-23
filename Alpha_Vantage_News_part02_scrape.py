@@ -184,5 +184,6 @@ display(df_unioned_w_text)
 # COMMAND ----------
 
 # MAGIC %md #Notes:
+# MAGIC > ## A version of the final dataframe, above, has been exported to csv and uploaded to Huggingface:  ogdendc/alpha_vantage_scraped
 # MAGIC > ## The 'url' and 'text' columns provide plug-n-play option for converting the standard RAG demo into a FinServ focused RAG demo.
 # MAGIC > ## The 'text_clean' column is great option to trialing some Databricks AI functions.
