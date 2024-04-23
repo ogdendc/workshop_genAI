@@ -42,7 +42,7 @@ API_key = "1234567ABCDEFG"
 # https://github.com/ogdendc/workshop_genAI/blob/main/stock_ticker_list_500_from_NASDAQ.csv
 
 import pandas as pd
-pd_df = pd.read_csv("https://raw.githubusercontent.com/ogdendc/workshop_genAI/main/stock_ticker_list_500_from_NASDAQ.csv", header=0)
+pd_df = pd.read_csv("https://raw.githubusercontent.com/ogdendc/workshop_genai_data/main/stock_ticker_list_500_from_NASDAQ.csv", header=0)
 display(pd_df)
 
 # COMMAND ----------
