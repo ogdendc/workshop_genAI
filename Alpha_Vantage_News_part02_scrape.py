@@ -86,7 +86,7 @@ def download_documentation_articles(max_documents=None):
             try:
                 #response = http.get(url)
                 # added user-agent to supposedly tell website who is accessing, which reduced null responses for raw content
-                response = http.get(url, headers={'user-agent': 'my-app/0.0.1'}) 
+                response = http.get(url, headers={'user-agent': 'my-app/1.1.1'}) 
                 if response.status_code == 200:
                     return response.content
             except requests.RequestException:
