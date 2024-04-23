@@ -12,8 +12,12 @@
 
 # MAGIC %md
 # MAGIC ## NOTE:
-# MAGIC > ### You can read this list from Huggingface, or...
+# MAGIC > ### You can read this data from Huggingface, or...
 # MAGIC > ### you can use your own version created from running the "...part02" program.
+
+# COMMAND ----------
+
+# MAGIC %pip install datasets
 
 # COMMAND ----------
 
@@ -57,7 +61,7 @@ df_unioned.createOrReplaceTempView("temp_alphavantage_view")
 # MAGIC   ai_mask(text_clean, array('person', 'company'))                             AS text_masked,
 # MAGIC   ai_summarize(text_clean, 20)                                                AS text_sum_20words,
 # MAGIC   ai_query('databricks-dbrx-instruct', CONCAT('Concisely summarize this article:\n', text_clean)) AS dbrx_text_sum,
-# MAGIC   ai_query('databricks-mixtral-8x7b-instruct', CONCAT('Identify and list the entities in this text:\n', text_clean))     AS mxtrl_entities
+# MAGIC   ai_query('databricks-mixtral-8x7b-instruct', CONCAT('Identify and list the corporate entities in this text:\n', text_clean))     AS mxtrl_entities
 # MAGIC FROM
 # MAGIC   temp_alphavantage_view
 # MAGIC WHERE ticker = "MSFT"
